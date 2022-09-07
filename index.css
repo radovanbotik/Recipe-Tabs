@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* modifier classes */
+.btn.active {
+  background-color: red;
+}
+.tabs-data.active {
+  display: block;
+}
+/* general styles */
+html {
+  font-size: 62.5%;
+}
+body {
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.75rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1.25rem;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ul {
+  list-style: none;
+}
+/* layout */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  gap: 1em;
+}
+main {
+  height: 200px;
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+}
+.tabs-images {
+  flex: 1;
+}
+.tabs-content-section {
+  flex: 1;
+}
+.tabs-header {
+  display: flex;
+  justify-content: space-between;
+}
+/* .btn {
+  display: none;
+} */
+
+.tabs-data {
+  display: none;
+}
