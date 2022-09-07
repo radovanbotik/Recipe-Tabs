@@ -1,7 +1,7 @@
 import { getElement, getElementAll } from "./utility/getElement.js";
+import { createContent } from "./createContent.js";
 
 const tabsContentSection = getElement(".tabs-content-section");
-
 const tabsButtons = [...getElementAll(".btn")];
 const tabsDatas = [...getElementAll(".tabs-data")];
 

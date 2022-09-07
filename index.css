@@ -54,6 +54,7 @@ main {
   width: 90vw;
   margin: 0 auto;
   display: flex;
+  gap: 1em;
 }
 .tabs-images {
   flex: 1;
@@ -63,11 +64,15 @@ main {
 }
 .tabs-header {
   display: flex;
-  justify-content: space-between;
+  gap: 0.5em;
 }
-/* .btn {
-  display: none;
-} */
+.btn {
+  flex: 1;
+  padding: 0em 1em;
+  border: none;
+  color: white;
+  background-color: black;
+}
 
 .tabs-data {
   display: none;
