@@ -77,3 +77,8 @@ main {
 .tabs-data {
   display: none;
 }
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+}

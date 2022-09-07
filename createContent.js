@@ -7,26 +7,49 @@ const tabsHeader = getElement(".tabs-header");
 const tabsFooter = getElement(".tabs-footer");
 const tabsButtons = [...getElementAll(".btn")];
 const tabsDatas = [...getElementAll(".tabs-data")];
-console.log(meals);
+
 const createButtons = () => {
   const btns = meals
     .map(meal => {
-      const { id, image, ingredients, name } = meal;
+      const { id, name } = meal;
       return `
-        <button class="btn active" data-id="${id}">${name}</button>
+        <button class="btn" data-id="${id}">${name}</button>
         `;
     })
     .join("");
-  tabsHeader.innerHTML = btns;
+  return (tabsHeader.innerHTML = btns);
 };
-const createContent = () => {
-  meals.map(meal => {
-    const { id, image, ingredients, name } = meal;
-    return `
-    
-    `;
-  });
+
+const createData = () => {
+  const data = meals
+    .map(meal => {
+      const { id, ingredients, name, instructions } = meal;
+      const ingredientsListItems = ingredients
+        .map((ing, index) => {
+          const { name, weight } = ing;
+          return `
+        <li class='listItem'><span>Ingredient${
+          index + 1
+        } : ${name}</span><span> weight: ${weight}</span</li>
+        `;
+        })
+        .join("");
+      return `
+        <article class="tabs-data" id="${id}">
+        <h4>${name}</h4>
+        <p>
+          ${instructions}
+        </p>
+        <ul>
+         ${ingredientsListItems}
+        </ul>
+      </article>
+        `;
+    })
+    .join("");
+  return (tabsFooter.innerHTML = data);
 };
-createButtons();
-createContent();
-export { createContent };
+tabsContentSection.innerHTML = `${createButtons()}${createData()}`;
+// createButtons();
+// createData();
+export { createButtons, createData, tabsContentSection };
