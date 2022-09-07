@@ -1,3 +1,6 @@
+import { meals } from "../data/mealsData.js";
+console.log(meals);
+
 const getElement = selector => {
   if (document.querySelector(selector)) return document.querySelector(selector);
   else throw new Error("Selector does not exist. Check it again!");
