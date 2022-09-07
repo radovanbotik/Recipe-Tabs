@@ -1,11 +1,7 @@
 import { getElement, getElementAll } from "./utility/getElement.js";
-import {
-  createButtons,
-  createData,
-  tabsContentSection,
-} from "./createContent.js";
+//I am changing HTML in createContent so I have to import the new value
+import { tabsContentSection } from "./createContent.js";
 
-// const tabsContentSection = getElement(".tabs-content-section");
 const tabsButtons = [...getElementAll(".btn")];
 const tabsDatas = [...getElementAll(".tabs-data")];
 tabsContentSection.addEventListener("click", e => {

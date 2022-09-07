@@ -17,7 +17,7 @@ const createButtons = () => {
         `;
     })
     .join("");
-  return (tabsHeader.innerHTML = btns);
+  tabsHeader.innerHTML = btns;
 };
 
 const createData = () => {
@@ -47,9 +47,10 @@ const createData = () => {
         `;
     })
     .join("");
-  return (tabsFooter.innerHTML = data);
+  tabsFooter.innerHTML = data;
 };
-tabsContentSection.innerHTML = `${createButtons()}${createData()}`;
-// createButtons();
-// createData();
+
+createButtons();
+createData();
+
 export { createButtons, createData, tabsContentSection };
