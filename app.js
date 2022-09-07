@@ -7,5 +7,16 @@ const tabsDatas = [...getElementAll(".tabs-data")];
 
 tabsContentSection.addEventListener("click", e => {
   const element = e.target.dataset.id;
-  console.log(element);
+
+  if (element) {
+    tabsButtons.forEach(btn => {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    tabsDatas.forEach(data => {
+      data.classList.remove("active");
+    });
+    const matchingData = getElement(`#${element}`);
+    matchingData.classList.add("active");
+  }
 });
